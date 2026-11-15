@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Misja 4: Szyfr podstawieniowy / Mission 4: Substitution cipher – Akademia Szyfrantów</title>
+<meta name="description" content="Misja 4 – szyfr podstawieniowy / Mission 4 – substitution cipher">
+<meta name="author" content="Andrzej Wojciech Dobosz">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'><circle cx='32' cy='32' r='29' fill='%231b5e45' stroke='%23f2c35b' stroke-width='3'/><circle cx='25' cy='27' r='10' fill='none' stroke='%23f2c35b' stroke-width='5'/><path d='M32 34 L46 48 M40 42 L44 38 M44 46 L48 42' stroke='%23f2c35b' stroke-width='5' stroke-linecap='round'/><text x='25' y='31' font-family='monospace' font-size='11' font-weight='700' fill='%23fff' text-anchor='middle'>A</text></svg>">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/site.js" defer></script>
+</head>
+<body data-page="m4">
+<header class="top"><div class="hi"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29" fill="#1b5e45" stroke="#f2c35b" stroke-width="3"/><circle cx="25" cy="27" r="10" fill="none" stroke="#f2c35b" stroke-width="5"/><path d="M32 34 L46 48 M40 42 L44 38 M44 46 L48 42" stroke="#f2c35b" stroke-width="5" stroke-linecap="round"/><text x="25" y="31" font-family="monospace" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">A</text></svg><div><div class="tt">Akademia Szyfrantów <span class="stamp">TRENING</span></div><div class="st">Codebreakers' Academy · przygotowanie do / preparation for GCHQ Christmas Challenge 2026</div></div></div></header>
+<nav class="nav" aria-label="Menu"><a href="../index.html">Start</a> <a href="../strony/jak-zaczac.html">Jak zacząć / How to start</a> <a href="../index.html#misje">Misje / Missions</a> <a href="../strony/narzedzia.html">Narzędzia / Toolbox</a> <a href="../strony/techniki.html">Techniki / Techniques</a> <a href="../strony/slowniczek.html">Słowniczek / Puzzle English</a> <a href="../strony/archiwum.html">Archiwum / Archive</a> <a href="../strony/dla-rodzicow.html">Rodzice / Parents</a> <a href="../strony/dla-nauczyciela.html">Nauczyciele / Teachers</a></nav>
+<main>
+<h1>Misja 4: Szyfr podstawieniowy<span class="en">Mission 4: Substitution cipher</span></h1>
+<div class="lo"><div class="h">Cele lekcji / Learning objectives</div><ul><li>Potrafię rozpoznać szyfr podstawieniowy. <span class="en">I can recognise a substitution cipher.</span></li><li>Potrafię go łamać, szukając krótkich słów, podwójnych liter i najczęstszych liter. <span class="en">I can break it by looking for short words, double letters and the most common letters.</span></li><li>Potrafię zbudować alfabet ze słowem-kluczem. <span class="en">I can build a keyword alphabet.</span></li></ul></div><div class="vocab" aria-label="Słowniczek / Key vocabulary"><span>podstawienie <i>/ substitution</i></span><span>analiza częstości <i>/ frequency analysis</i></span><span>słowo-klucz <i>/ keyword</i></span><span>wzór liter <i>/ letter pattern</i></span></div><p>W szyfrze podstawieniowym każda litera jest zastępowana inną literą — i to zawsze tą samą. To trudniejsze niż przesunięcie, bo możliwości jest astronomicznie dużo (ponad 400 kwadrylionów). Na szczęście angielski zostawia ślady, a detektyw je czyta.</p>
+<p class="en">In a substitution cipher each letter is replaced by another letter — and always by the same one. It is harder than a shift because there is an astronomical number of possibilities (over 400 septillion). Luckily, English leaves clues, and a detective reads them.</p><h2>Cztery tropy detektywa <span class="en">/ Four detective clues</span></h2><ol class="steps">
+<li>Słowo z jednej litery to prawie zawsze <b>A</b> albo <b>I</b>. <span class="en">A one-letter word is almost always <b>A</b> or <b>I</b>.</span></li>
+<li>Najczęstsze słowo z trzech liter to <b>THE</b>, potem <b>AND</b>. <span class="en">The most common three-letter word is <b>THE</b>, then <b>AND</b>.</span></li>
+<li>Podwójne litery to zwykle <b>LL, EE, SS, OO, TT</b>. <span class="en">Double letters are usually <b>LL, EE, SS, OO, TT</b>.</span></li>
+<li>Najczęstsze litery w angielskim to <b>E, T, A, O</b>. Policz litery w <a href="narzedzia.html">skrzynce narzędzi</a>. <span class="en">The most common letters in English are <b>E, T, A, O</b>. Count the letters in the toolbox.</span></li>
+</ol><h2>Alfabet ze słowem-kluczem <span class="en">/ Keyword alphabet</span></h2><p>Najpierw piszesz słowo-klucz bez powtórzeń, a potem resztę alfabetu. Klucz SNOW daje:</p>
+<p class="en">First you write the keyword without repeated letters, then the rest of the alphabet. The keyword SNOW gives:</p><p class="cipher">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br><span style="color:var(--holly)">S N O W A B C D E F G H I J K L M P Q R T U V X Y Z</span></p><div class="note">💡 <b class="k">Zapamiętaj!</b> Łamanie szyfru to praca detektywa: nie zgadujesz wszystkiego naraz. Znajdujesz jeden pewny trop, wpisujesz go wszędzie i patrzysz, co się odsłoni.<br><span class="en"><b class="k">Remember!</b> Breaking a cipher is detective work: you do not guess everything at once. You find one sure clue, write it in everywhere and see what appears.</span></div><h2>Ćwiczenia <span class="en">/ Practice</span></h2><div class="q" id="m4q1" data-h="7c8c8555" data-a="VFJFRQ==">
+<div class="n">ZADANIE / TASK 1</div>
+<p>Gdzie szpieg ukrył klucz? Wpisz ostatnie słowo.</p><p class="en">Where did the spy hide the key? Type the last word.</p><p class="cipher">RTH DGE TZI RTH NHE ZQ RTH RLHH</p>
+<details><summary>Podpowiedź / Hint</summary><p>Słowo RTH pojawia się trzy razy. To prawie na pewno THE.</p><p class="en">The word RTH appears three times. It is almost certainly THE.</p></details>
+<div class="row"><input type="text" aria-label="Odpowiedź / Answer" autocomplete="off" spellcheck="false"><button type="button" class="chk">Sprawdź / Check</button></div>
+<div class="msg" role="status" aria-live="polite"></div></div><div class="q" id="m4q2" data-h="cf018d61" data-a="U0xFSUdI">
+<div class="n">ZADANIE / TASK 2</div>
+<p>Szyfr ze słowem-kluczem <b>ROBIN</b>. Rozszyfruj: <span class="mono">SHNECD</span></p><p class="en">A keyword cipher with the keyword <b>ROBIN</b>. Decode: <span class="mono">SHNECD</span></p>
+<details><summary>Podpowiedź / Hint</summary><p>Zbuduj alfabet: ROBINACDEF… i zapisz go pod zwykłym alfabetem. Potem szukaj liter szyfrogramu w dolnym wierszu.</p><p class="en">Build the alphabet ROBINACDEF… and write it under the normal alphabet. Then find the ciphertext letters in the bottom row.</p></details>
+<div class="row"><input type="text" aria-label="Odpowiedź / Answer" autocomplete="off" spellcheck="false"><button type="button" class="chk">Sprawdź / Check</button></div>
+<div class="msg" role="status" aria-live="polite"></div></div><div class="q" id="m4q3" data-h="d4283cd" data-a="SE9MTFk=">
+<div class="n">ZADANIE / TASK 3</div>
+<p>Słowo zaszyfrowane jako <span class="mono">QWEEX</span> ma ten sam wzór liter co jedno z tych słów: <b>PEACE, HOLLY, SANTA, GIFTS</b>. Które?</p><p class="en">The word encoded as <span class="mono">QWEEX</span> has the same letter pattern as one of these words: <b>PEACE, HOLLY, SANTA, GIFTS</b>. Which one?</p>
+<details><summary>Podpowiedź / Hint</summary><p>W QWEEX trzecia i czwarta litera są takie same.</p><p class="en">In QWEEX the third and fourth letters are the same.</p></details>
+<div class="row"><input type="text" aria-label="Odpowiedź / Answer" autocomplete="off" spellcheck="false"><button type="button" class="chk">Sprawdź / Check</button></div>
+<div class="msg" role="status" aria-live="polite"></div></div><div class="box">📂 <b>W archiwum GCHQ / In the GCHQ archive:</b> szyfr podstawieniowy i szyfr ze słowem-kluczem <span class="en">the substitution cipher and the keyword cipher</span> — <b>2021, 2024, 2025</b>. <a href="archiwum.html">Archiwum / Archive →</a></div><div class="banner" id="banner">🏅 Misja ukończona! Zdobywasz odznakę. <span class="en">Mission complete! You have earned a badge.</span></div><div class="pager"><a href="m3-szyfr-cezara.html">← Misja 3 / Mission 3</a><a href="m5-binarny.html">Misja 5 / Mission 5 →</a></div>
+</main>
+<footer>
+<p>Twoje odpowiedzi i odznaki zapisują się tylko w tej przeglądarce, na tym urządzeniu — nikt ich nie widzi i nikt ich nigdzie nie wysyła. Na innym komputerze ich nie będzie, a wyczyszczenie danych przeglądarki je usunie. <span class="en">Your answers and badges are saved only in this browser, on this device — nobody sees them and nobody sends them anywhere. They will not be there on another computer, and clearing your browser data removes them.</span></p>
+<p>To niezależny materiał do ćwiczeń, niepowiązany z GCHQ i przez nie niezatwierdzony. Oficjalne zadania i rozwiązania znajdziesz na <a href="https://www.gchq.gov.uk/information/xmas-cards" target="_blank" rel="noopener">gchq.gov.uk</a>. Wszystkie zadania na tej stronie są oryginalne. <span class="en">This is independent practice material, not affiliated with or endorsed by GCHQ. The official puzzles and solutions are at gchq.gov.uk. All puzzles on this site are original.</span></p>
+<p>Stronę opracował Andrzej Dobosz dla the British Primary School of Wilanow. <span class="en">Created by Andrzej Dobosz for the British Primary School of Wilanow.</span></p>
+<p>© 2026 Andrzej Dobosz, British Primary School of Wilanow. Licencja <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.pl" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a> — wolno rozpowszechniać z podaniem autora, bez zmian i bez celów komercyjnych. <span class="en">Licensed under CC BY-NC-ND 4.0 — share with attribution, no changes, non-commercial use only.</span></p>
+<p>Materiał przygotowany z użyciem AI na podstawie analizy publicznie dostępnych edycji GCHQ Christmas Challenge 2021–2025. <span class="en">Material prepared with the use of AI, based on an analysis of the publicly available GCHQ Christmas Challenge editions 2021–2025.</span></p>
+</footer>
+</body>
+</html>
