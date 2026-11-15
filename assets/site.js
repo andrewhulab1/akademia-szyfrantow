@@ -29,7 +29,7 @@ document.querySelectorAll('.q[data-h]').forEach(function(q){
     var v=norm(inp.value);
     if(!v){say('err','Wpisz odpowiedź.','Type an answer.');return}
     if(hash(v)===q.getAttribute('data-h')){
-      q.classList.add('done');say('ok','Brawo! Dobra odpowiedź.','Well done! Correct.');
+      q.classList.add('done');say('ok','Brawo! Dobra odpowiedź.','Well done! Correct.');msg.insertAdjacentHTML('afterbegin','<span class="lampburst" aria-hidden="true"></span>');q.classList.remove('flash');void q.offsetWidth;q.classList.add('flash');
       st[page]=st[page]||{};st[page][q.id]=1;save(st);solvedAll();
     }else{
       tries++;
@@ -51,8 +51,15 @@ solvedAll();
 var bd=(st.badges||{}),got=0;
 document.querySelectorAll('[data-mission]').forEach(function(c){if(bd[c.getAttribute('data-mission')]){c.classList.add('got');got++}});
 var pr=document.getElementById('progress');if(pr)pr.textContent=got;
+var arc=document.getElementById('dialArc');if(arc){var C=+arc.getAttribute('data-c');arc.style.strokeDashoffset=(C*(1-Math.min(got,12)/12)).toFixed(1);var on=Math.round(Math.min(got,12)/12*26);document.querySelectorAll('.dial .lt').forEach(function(e,i){e.classList.toggle('on',i<on)});}
 var rs=document.getElementById('reset');
 if(rs)rs.addEventListener('click',function(){save({});location.reload()});
+
+/* maszyna do pisania / typewriter */
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(page&&/^(m\d+|extra|hist)$/.test(page)&&!RM){var h1=document.querySelector('main h1'),tn=h1&&h1.firstChild;
+  if(tn&&tn.nodeType===3){var full=tn.nodeValue,i=0;tn.nodeValue='';h1.classList.add('typing');
+    var tick=setInterval(function(){i++;tn.nodeValue=full.slice(0,i);if(i>=full.length){clearInterval(tick);setTimeout(function(){h1.classList.remove('typing')},900)}},45);}}
 
 /* odliczanie / countdown */
 var cd=document.getElementById('countdown');
